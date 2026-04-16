@@ -6,6 +6,24 @@ A React Native native module for **audio recording and playback** using platform
 
 ---
 
+## Screenshots
+
+<p align="center">
+  <img src="screenshots/recording.png" width="200" alt="Recording in progress" />
+  &nbsp;&nbsp;
+  <img src="screenshots/ready-to-play.png" width="200" alt="Ready to play" />
+  &nbsp;&nbsp;
+  <img src="screenshots/playing.png" width="200" alt="Playing audio" />
+  &nbsp;&nbsp;
+  <img src="screenshots/speed-control.png" width="200" alt="2x speed control" />
+</p>
+
+<p align="center">
+  <b>Recording</b> · <b>Ready to Play</b> · <b>Playing</b> · <b>Speed Control (2x)</b>
+</p>
+
+---
+
 ## Why This Exists
 
 ### The Problem
