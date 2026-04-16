@@ -9,13 +9,13 @@ A React Native native module for **audio recording and playback** using platform
 ## Screenshots
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ibrahimhamed11/rn-native-audio-recorder/main/screenshots/recording.jpg" width="200" alt="Recording in progress" />
+  <img src="https://raw.githubusercontent.com/ibrahimhamed11/rn-native-audio-recorder/main/screenshots/recording.png" width="200" alt="Recording in progress" />
   &nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/ibrahimhamed11/rn-native-audio-recorder/main/screenshots/ready-to-play.jpg" width="200" alt="Ready to play" />
+  <img src="https://raw.githubusercontent.com/ibrahimhamed11/rn-native-audio-recorder/main/screenshots/ready-to-play.png" width="200" alt="Ready to play" />
   &nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/ibrahimhamed11/rn-native-audio-recorder/main/screenshots/playing.jpg" width="200" alt="Playing audio" />
+  <img src="https://raw.githubusercontent.com/ibrahimhamed11/rn-native-audio-recorder/main/screenshots/playing.png" width="200" alt="Playing audio" />
   &nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/ibrahimhamed11/rn-native-audio-recorder/main/screenshots/speed-control.jpg" width="200" alt="2x speed control" />
+  <img src="https://raw.githubusercontent.com/ibrahimhamed11/rn-native-audio-recorder/main/screenshots/speed-control.png" width="200" alt="2x speed control" />
 </p>
 
 <p align="center">
