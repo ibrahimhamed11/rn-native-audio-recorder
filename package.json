@@ -1,0 +1,46 @@
+{
+  "name": "rn-native-audio-recorder",
+  "version": "1.0.0",
+  "description": "A React Native native module for audio recording and playback using platform APIs (AVFoundation on iOS, MediaRecorder on Android). No JS-based audio libraries — pure native performance.",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "files": [
+    "src/",
+    "android/",
+    "ios/",
+    "rn-native-audio-recorder.podspec",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "react-native",
+    "audio-recorder",
+    "voice-recorder",
+    "native-module",
+    "android",
+    "ios",
+    "media-recorder",
+    "avfoundation",
+    "audio-playback",
+    "microphone"
+  ],
+  "author": {
+    "name": "Ibrahim Hamed",
+    "url": "https://ibrahimtoulba.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibrahimhamed11/rn-native-audio-recorder.git"
+  },
+  "homepage": "https://github.com/ibrahimhamed11/rn-native-audio-recorder#readme",
+  "bugs": {
+    "url": "https://github.com/ibrahimhamed11/rn-native-audio-recorder/issues"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-native": ">=0.72.0"
+  }
+}
