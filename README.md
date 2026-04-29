@@ -4,6 +4,8 @@ By **Ibrahim Hamed** · [GitHub](https://github.com/ibrahimhamed11)
 
 A React Native native module for **audio recording and playback** using platform APIs — `AVFoundation` on iOS and `MediaRecorder`/`MediaPlayer` on Android. Zero JS audio dependencies. Pure native performance.
 
+**v1.1.0** adds `preloadAudio` for zero-latency playback and `getRecordingLevel` for real-time waveform metering.
+
 ---
 
 ## Screenshots
@@ -131,10 +133,12 @@ import {
   stopRecording,
   startPlaying,
   stopPlaying,
+  preloadAudio,
   setPlaybackSpeed,
   getPlaybackPosition,
   seekTo,
   deleteRecording,
+  getRecordingLevel,
   isAvailable,
 } from 'rn-native-audio-recorder';
 
@@ -143,8 +147,19 @@ console.log('AudioRecorder available:', isAvailable);
 
 // Record
 const { filePath } = await startRecording();
-// ... user records ...
+
+// Poll recording level (0..1) every 100ms to animate a waveform
+const meter = setInterval(async () => {
+  const level = await getRecordingLevel();
+  console.log('Level:', level); // 0.0 - 1.0
+}, 100);
+
+// Stop recording
+clearInterval(meter);
 const { filePath: savedPath, duration } = await stopRecording();
+
+// Preload for instant, zero-latency playback
+await preloadAudio(savedPath);
 
 // Play
 const { duration: totalDuration } = await startPlaying(savedPath);
@@ -214,6 +229,18 @@ Seek to a position in milliseconds.
 ### `deleteRecording(path: string): Promise<boolean>`
 Delete a recording file from disk.
 
+### `preloadAudio(path: string): Promise<PreloadAudioResult>`
+Pre-buffers an audio file without playing it. Use this before `startPlaying` to eliminate startup latency (particularly useful in list-based UIs like chat voice notes).
+
+Returns:
+| Field | Type | Description |
+|-------|------|-------------|
+| `duration` | `number` | Total duration of the file in milliseconds |
+| `success` | `boolean` | Whether preloading succeeded |
+
+### `getRecordingLevel(): Promise<number>`
+While recording is active, returns the current instantaneous amplitude normalized to `0..1`. Poll on an interval (e.g. every 100ms) to drive a live waveform or meter animation.
+
 ### `requestMicrophonePermission(): Promise<boolean>`
 Manually request microphone permission (called automatically by `startRecording` on Android).
 
@@ -238,12 +265,27 @@ interface StartPlayingResult {
   success: boolean;
 }
 
+interface PreloadAudioResult {
+  duration: number;
+  success: boolean;
+}
+
 interface PlaybackPosition {
   position: number;
   duration: number;
   isPlaying: boolean;
 }
 ```
+
+---
+
+## Changelog
+
+### v1.1.0
+- ✅ Added `preloadAudio(path)` — pre-buffers audio for zero-latency playback
+- ✅ Added `getRecordingLevel()` — real-time amplitude metering (0..1) for waveform UI
+- ✅ Exported `PreloadAudioResult` type
+- ✅ Improved JSDoc comments on all exported functions
 
 ---
 

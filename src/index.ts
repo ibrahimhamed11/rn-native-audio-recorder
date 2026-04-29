@@ -1,6 +1,9 @@
 /**
  * rn-native-audio-recorder
  * React Native native module for audio recording & playback
+ * Supports: startRecording, stopRecording, startPlaying, stopPlaying,
+ *           preloadAudio, seekTo, getPlaybackPosition, setPlaybackSpeed,
+ *           deleteRecording, getRecordingLevel
  * By Ibrahim Hamed · https://ibrahimtoulba.com
  */
 
@@ -30,6 +33,15 @@ export interface PlaybackPosition {
   position: number;
   duration: number;
   isPlaying: boolean;
+}
+
+export interface PreloadAudioResult {
+  duration: number;
+  success: boolean;
+}
+
+export interface RecordingLevel {
+  level: number; // 0..1
 }
 
 // ── Permission helper ──────────────────────────────────
@@ -120,4 +132,23 @@ export async function seekTo(positionMs: number): Promise<boolean> {
 export async function deleteRecording(path: string): Promise<boolean> {
   assertAvailable();
   return NativeAudioRecorder.deleteRecording(path);
+}
+
+/**
+ * Preload an audio file for instant playback (pre-buffers without playing).
+ * Call this before `startPlaying` to eliminate startup latency.
+ * Returns duration in milliseconds.
+ */
+export async function preloadAudio(path: string): Promise<PreloadAudioResult> {
+  assertAvailable();
+  return NativeAudioRecorder.preloadAudio(path);
+}
+
+/**
+ * While recording, returns the current instantaneous amplitude level normalized to 0..1.
+ * Poll this on an interval (e.g. every 100ms) to drive a waveform / meter UI.
+ */
+export async function getRecordingLevel(): Promise<number> {
+  assertAvailable();
+  return NativeAudioRecorder.getRecordingLevel();
 }
