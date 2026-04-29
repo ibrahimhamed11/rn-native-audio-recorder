@@ -52,7 +52,7 @@ If you just need **simple, reliable voice recording and playback** (e.g. voice n
 This module provides a **thin, focused native bridge** that:
 
 ✅ Records audio to `.m4a` (AAC) — works on both platforms  
-✅ Plays back with speed control (0.5x–2.0x)  
+✅ Plays back with fine-grained speed control (0.5x, 0.75x, 1x, 1.25x, 1.5x, 1.75x, 2.0x) — powered by `AVAudioPlayer.rate` on iOS and `PlaybackParams` on Android  
 ✅ Supports seek, position tracking, and duration  
 ✅ Handles audio session setup automatically  
 ✅ Handles Android 12+ MediaRecorder changes  
