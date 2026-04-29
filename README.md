@@ -4,7 +4,7 @@ By **Ibrahim Hamed** · [GitHub](https://github.com/ibrahimhamed11)
 
 A React Native native module for **audio recording and playback** using platform APIs — `AVFoundation` on iOS and `MediaRecorder`/`MediaPlayer` on Android. Zero JS audio dependencies. Pure native performance.
 
-**v1.1.0** adds `preloadAudio` for zero-latency playback and `getRecordingLevel` for real-time waveform metering.
+**v1.1.1** updates screenshots. **v1.1.0** adds `preloadAudio` for zero-latency playback and `getRecordingLevel` for real-time waveform metering.
 
 ---
 
@@ -278,6 +278,9 @@ interface PlaybackPosition {
 ---
 
 ## Changelog
+
+### v1.1.1
+- ✅ Updated screenshots with latest UI
 
 ### v1.1.0
 - ✅ Added `preloadAudio(path)` — pre-buffers audio for zero-latency playback

@@ -1,6 +1,6 @@
 {
   "name": "rn-native-audio-recorder",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A React Native native module for high-quality audio recording & playback — powered by AVFoundation on iOS and MediaRecorder/MediaPlayer on Android. Records to .m4a with zero JS audio dependencies. Features: start/stop recording, playback with speed control (0.5x–2.0x), seek, preload for zero-latency playback, real-time recording level metering (0..1) for live waveform UI, and file management. Supports microphone permission handling on Android. Fully typed TypeScript API. Works with React Native 0.72+.",
   "main": "src/index.ts",
   "types": "src/index.ts",
