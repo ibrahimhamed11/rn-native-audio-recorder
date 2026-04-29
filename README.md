@@ -15,13 +15,11 @@ A React Native native module for **audio recording and playback** using platform
   &nbsp;&nbsp;
   <img src="https://raw.githubusercontent.com/ibrahimhamed11/rn-native-audio-recorder/main/screenshots/ready-to-play.png" width="200" alt="Ready to play" />
   &nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/ibrahimhamed11/rn-native-audio-recorder/main/screenshots/playing.png" width="200" alt="Playing audio" />
-  &nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/ibrahimhamed11/rn-native-audio-recorder/main/screenshots/speed-control.png" width="200" alt="2x speed control" />
+  <img src="https://raw.githubusercontent.com/ibrahimhamed11/rn-native-audio-recorder/main/screenshots/playing.png" width="200" alt="Playing at 1.5x speed" />
 </p>
 
 <p align="center">
-  <b>Recording</b> · <b>Ready to Play</b> · <b>Playing</b> · <b>Speed Control (2x)</b>
+  <b>Recording</b> · <b>Ready to Play</b> · <b>Playing (1.5x speed)</b>
 </p>
 
 ---
